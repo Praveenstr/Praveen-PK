@@ -1,0 +1,12 @@
+from tkinter import *
+from time import *
+def update():
+    time_now =strftime("%I :%M :%S %p")
+    time_lable.config(text=time_now)
+    time_lable.after(1000,update)
+time_lable=Label(font='arial',bg="red")
+time_lable.pack()
+window=Tk()
+window.title("Smart cllock")
+update()
+window.mainloop()
